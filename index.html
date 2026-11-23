@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Baddi Bhanu Prasad – Cybersecurity Student & Aspiring Security Engineer from Visakhapatnam, India. Specializing in ethical hacking, AI-powered security, and vulnerability research." />
+  <meta name="keywords" content="cybersecurity, ethical hacking, penetration testing, Kali Linux, Burp Suite, Nmap, Python, portfolio, Bhanu Prasad" />
+  <meta name="author" content="Baddi Bhanu Prasad" />
+  <meta property="og:title" content="Baddi Bhanu Prasad | Cybersecurity Portfolio" />
+  <meta property="og:description" content="Cybersecurity Student & Aspiring Security Engineer – Ethical Hacking, AI Security, Vulnerability Research" />
+  <meta property="og:image" content="assets/img/hero_bg_poster_1794247198993.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Baddi Bhanu Prasad | Cybersecurity Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+</head>
+<body>
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader" role="status" aria-label="Loading portfolio">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <span class="loader-bracket">[</span>
+        <span class="loader-text" id="loader-text"></span>
+        <span class="loader-cursor">_</span>
+        <span class="loader-bracket">]</span>
+      </div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loader-bar"></div>
+      </div>
+      <p class="loader-status" id="loader-status">INITIALIZING SECURE CONNECTION...</p>
+    </div>
+  </div>
+
+  <!-- ===== NAV ===== -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo" aria-label="Bhanu Prasad – Home">
+        <span class="logo-bracket">[</span><span class="logo-name">BBP</span><span class="logo-bracket">]</span>
+      </a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#home" class="nav-link" aria-current="page">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#certificates" class="nav-link">Certs</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero" aria-labelledby="hero-title">
+    <div class="hero-video-wrap">
+      <video
+        id="hero-video"
+        class="hero-video"
+        autoplay muted playsinline preload="metadata"
+        poster="assets/img/hero_bg_poster_1794247198993.png"
+        aria-hidden="true"
+      >
+        <source src="assets/video/about-video.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="scanlines" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero-content hero-content--right">
+      <div class="hero-badge" aria-label="Status indicator">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="font-mono text-xs">SYSTEM ONLINE</span>
+      </div>
+
+      <div class="hero-name-wrap">
+        <h1 id="hero-title" class="hero-name glitch" data-text="BADDI BHANU PRASAD">
+          BADDI BHANU PRASAD
+        </h1>
+      </div>
+
+      <div class="hero-role-wrap" aria-live="polite">
+        <span class="hero-role-prefix font-mono">// </span>
+        <span class="hero-role" id="typing-role"></span>
+        <span class="hero-cursor" aria-hidden="true">|</span>
+      </div>
+
+      <p class="hero-location font-mono">
+        <i data-lucide="map-pin" class="inline-icon" aria-hidden="true"></i>
+        Visakhapatnam, India
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#projects" class="btn btn-primary" id="btn-projects">
+          <i data-lucide="shield" aria-hidden="true"></i>
+          View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline" id="btn-contact">
+          <i data-lucide="terminal" aria-hidden="true"></i>
+          Get In Touch
+        </a>
+        <a href="BADDI_BHANU_PRASAD_FlowCV_Resume_2026-11-03.pdf" class="btn btn-ghost" download id="btn-resume" aria-label="Download Resume PDF">
+          <i data-lucide="download" aria-hidden="true"></i>
+          Resume
+        </a>
+      </div>
+
+      <div class="hero-socials" aria-label="Social links">
+        <a href="https://github.com/Baddibhanuprasad" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+          <i data-lucide="github" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/bhanu-prasad-96998a31b/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+          <i data-lucide="linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:baddibhanuprasad01@gmail.com" class="social-link" aria-label="Email">
+          <i data-lucide="mail" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span class="font-mono text-xs">SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== SCROLL THEATER (About → Skills) ===== -->
+  <div id="scroll-theater" class="scroll-theater">
+
+    <!-- Scroll-scrubbed background video -->
+    <div class="st-video-wrap" aria-hidden="true">
+      <video
+        id="st-video"
+        class="st-video"
+        muted playsinline preload="auto"
+        aria-hidden="true"
+      >
+        <source src="assets/video/scroll-theater.mp4" type="video/mp4" />
+      </video>
+      <div class="st-video-overlay"></div>
+    </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section about-section" aria-labelledby="about-title">
+    <div class="about-video-bg" aria-hidden="true">
+      <video
+        id="about-video"
+        class="about-video"
+        autoplay muted loop playsinline preload="none"
+        poster="assets/img/hero_bg_poster_1794247198993.png"
+        aria-hidden="true"
+      >
+        <source src="assets/video/about-video.mp4" type="video/mp4" />
+      </video>
+      <div class="about-video-overlay"></div>
+    </div>
+
+    <div class="container">
+      <div class="section-header">
+        <h2 id="about-title" class="section-title reveal-up">
+          <span class="title-accent">01.</span> About Me
+        </h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-avatar-wrap reveal-left">
+          <div class="avatar-frame">
+            <img
+              src="assets/img/profile_avatar_1794247210865.png"
+              alt="Bhanu Prasad – Cybersecurity profile avatar"
+              class="avatar-img"
+              width="380"
+              height="380"
+            />
+            <div class="avatar-glow" aria-hidden="true"></div>
+            <div class="avatar-corner tl" aria-hidden="true"></div>
+            <div class="avatar-corner tr" aria-hidden="true"></div>
+            <div class="avatar-corner bl" aria-hidden="true"></div>
+            <div class="avatar-corner br" aria-hidden="true"></div>
+          </div>
+          <div class="avatar-stats" aria-label="Quick stats">
+            <div class="stat-item">
+              <span class="stat-num" data-count="3">0</span>+
+              <span class="stat-label">Years Study</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-count="4">0</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-count="5">0</span>+
+              <span class="stat-label">Hackathons</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal-right">
+          <div class="glass-card about-card">
+            <div class="card-corner-tl" aria-hidden="true"></div>
+            <div class="card-corner-br" aria-hidden="true"></div>
+            <p class="about-text">
+              I'm a passionate <strong>Cybersecurity student</strong> at Visakha Institute of Engineering &amp; Technology, driven by a relentless curiosity to understand how systems work — and how to protect them. With a strong foundation in ethical hacking, vulnerability assessment, and AI-powered security solutions, I bridge the gap between cutting-edge research and real-world defense.
+            </p>
+            <p class="about-text">
+              My journey into cybersecurity began with hands-on labs on <strong>TryHackMe</strong>, <strong>HackTheBox</strong>, and <strong>PortSwigger Academy</strong>, where I've sharpened my offensive and defensive skills through real CTF challenges and web exploitation exercises.
+            </p>
+            <p class="about-text">
+              From building an <strong>Anti-Ransomware Protection System</strong> to developing an <strong>AI-powered scam detection platform</strong>, I approach every challenge with a security-first mindset. I thrive in hackathon environments, having placed 1st twice at VIET competitions and competed nationally at HackWithVizag 4.0.
+            </p>
+            <div class="about-tags" aria-label="Platforms">
+              <span class="tag tag-blue">TryHackMe</span>
+              <span class="tag tag-red">HackTheBox</span>
+              <span class="tag tag-purple">PortSwigger Academy</span>
+              <span class="tag tag-blue">CTF Player</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section skills-section" aria-labelledby="skills-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="skills-title" class="section-title reveal-up">
+          <span class="title-accent">02.</span> Skills &amp; Arsenal
+        </h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Offensive Security -->
+        <div class="skill-category glass-card reveal-up" style="--delay:0s">
+          <div class="card-corner-tl" aria-hidden="true"></div>
+          <h3 class="skill-cat-title">
+            <i data-lucide="sword" aria-hidden="true"></i>
+            Offensive Security
+          </h3>
+          <div class="skill-chips">
+            <span class="chip chip-red">Kali Linux</span>
+            <span class="chip chip-red">Burp Suite</span>
+            <span class="chip chip-red">Nmap</span>
+            <span class="chip chip-red">Vulnerability Scanning</span>
+            <span class="chip chip-red">Penetration Testing</span>
+            <span class="chip chip-red">Web Exploitation</span>
+          </div>
+        </div>
+
+        <!-- Programming & Automation -->
+        <div class="skill-category glass-card reveal-up" style="--delay:0.1s">
+          <div class="card-corner-tl" aria-hidden="true"></div>
+          <h3 class="skill-cat-title">
+            <i data-lucide="code-2" aria-hidden="true"></i>
+            Programming &amp; Automation
+          </h3>
+          <div class="skill-chips">
+            <span class="chip chip-blue">Python</span>
+            <span class="chip chip-blue">SQL / MySQL</span>
+            <span class="chip chip-blue">Automation Testing</span>
+            <span class="chip chip-blue">API Testing</span>
+            <span class="chip chip-blue">Scripting</span>
+          </div>
+        </div>
+
+        <!-- Defense & Cryptography -->
+        <div class="skill-category glass-card reveal-up" style="--delay:0.2s">
+          <div class="card-corner-tl" aria-hidden="true"></div>
+          <h3 class="skill-cat-title">
+            <i data-lucide="shield-check" aria-hidden="true"></i>
+            Defense &amp; Cryptography
+          </h3>
+          <div class="skill-chips">
+            <span class="chip chip-purple">Cryptography</span>
+            <span class="chip chip-purple">Network Security</span>
+            <span class="chip chip-purple">Sandboxing</span>
+            <span class="chip chip-purple">Malware Analysis</span>
+            <span class="chip chip-purple">Threat Detection</span>
+          </div>
+        </div>
+
+        <!-- Platforms & IoT -->
+        <div class="skill-category glass-card reveal-up" style="--delay:0.3s">
+          <div class="card-corner-tl" aria-hidden="true"></div>
+          <h3 class="skill-cat-title">
+            <i data-lucide="cpu" aria-hidden="true"></i>
+            Platforms &amp; IoT
+          </h3>
+          <div class="skill-chips">
+            <span class="chip chip-teal">IoT &amp; Embedded Systems</span>
+            <span class="chip chip-teal">Cloud Automation</span>
+            <span class="chip chip-teal">Linux Administration</span>
+            <span class="chip chip-teal">AI Integration</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Platforms bar -->
+      <div class="platforms-row reveal-up">
+        <p class="platforms-label font-mono">// Active Learning Platforms</p>
+        <div class="platforms-chips">
+          <a href="https://tryhackme.com" target="_blank" rel="noopener noreferrer" class="platform-chip platform-thm" aria-label="TryHackMe profile">
+            <span class="platform-dot" aria-hidden="true"></span> TryHackMe
+          </a>
+          <a href="https://hackthebox.com" target="_blank" rel="noopener noreferrer" class="platform-chip platform-htb" aria-label="HackTheBox profile">
+            <span class="platform-dot" aria-hidden="true"></span> HackTheBox
+          </a>
+          <a href="https://portswigger.net/web-security" target="_blank" rel="noopener noreferrer" class="platform-chip platform-ps" aria-label="PortSwigger Academy">
+            <span class="platform-dot" aria-hidden="true"></span> PortSwigger Academy
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </div><!-- /#scroll-theater -->
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section projects-section" aria-labelledby="projects-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="projects-title" class="section-title reveal-up">
+          <span class="title-accent">03.</span> Projects
+        </h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: Anti-Ransomware -->
+        <article class="project-card glass-card reveal-up" style="--delay:0s" aria-labelledby="proj1-title">
+          <div class="project-img-wrap">
+            <img
+              src="assets/img/project_ransomware_1794247232336.png"
+              alt="Anti-Ransomware Protection System – visual showing shield and security circuit patterns"
+              class="project-img"
+              width="600"
+              height="338"
+              loading="lazy"
+            />
+            <div class="project-img-overlay" aria-hidden="true"></div>
+            <span class="project-num font-mono" aria-hidden="true">01</span>
+          </div>
+          <div class="project-content">
+            <h3 id="proj1-title" class="project-title">Anti-Ransomware Protection System</h3>
+            <p class="project-desc">A proactive defense system that detects and neutralizes ransomware before encryption completes. Monitors filesystem behaviour in real time, isolates threats using sandboxing, and triggers automated rollback of compromised files.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span class="tag tag-red">Python</span>
+              <span class="tag tag-blue">Sandboxing</span>
+              <span class="tag tag-blue">File System Monitor</span>
+              <span class="tag tag-purple">Cryptography</span>
+              <span class="tag tag-blue">Automation</span>
+            </div>
+            <a href="https://github.com/Baddibhanuprasad/Anti-ransomware" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" aria-label="View Anti-Ransomware project on GitHub">
+              <i data-lucide="github" aria-hidden="true"></i>
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2: CyberGuard AI -->
+        <article class="project-card glass-card reveal-up" style="--delay:0.1s" aria-labelledby="proj2-title">
+          <div class="project-img-wrap">
+            <img
+              src="assets/img/project_cyberguard_1794247247087.png"
+              alt="CyberGuard AI – neural network visualization for scam detection"
+              class="project-img"
+              width="600"
+              height="338"
+              loading="lazy"
+            />
+            <div class="project-img-overlay" aria-hidden="true"></div>
+            <span class="project-num font-mono" aria-hidden="true">02</span>
+          </div>
+          <div class="project-content">
+            <h3 id="proj2-title" class="project-title">CyberGuard AI</h3>
+            <p class="project-desc">Real-time AI-powered scam detection &amp; secure calling system. Uses machine learning to analyse voice patterns, caller metadata, and conversation context to flag potential fraud — protecting users before they fall victim.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span class="tag tag-red">AI / ML</span>
+              <span class="tag tag-blue">Python</span>
+              <span class="tag tag-blue">NLP</span>
+              <span class="tag tag-purple">API Integration</span>
+              <span class="tag tag-blue">Real-time Analysis</span>
+            </div>
+            <a href="https://github.com/Baddibhanuprasad/Cyber-Guard" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" aria-label="View CyberGuard AI project on GitHub">
+              <i data-lucide="github" aria-hidden="true"></i>
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3: JARVIS -->
+        <article class="project-card glass-card reveal-up" style="--delay:0.2s" aria-labelledby="proj3-title">
+          <div class="project-img-wrap">
+            <img
+              src="assets/img/project_jarvis_1794247267933.png"
+              alt="JARVIS AI Virtual Assistant – holographic AI interface visualization"
+              class="project-img"
+              width="600"
+              height="338"
+              loading="lazy"
+            />
+            <div class="project-img-overlay" aria-hidden="true"></div>
+            <span class="project-num font-mono" aria-hidden="true">03</span>
+          </div>
+          <div class="project-content">
+            <h3 id="proj3-title" class="project-title">JARVIS – Intelligent Virtual Assistant</h3>
+            <p class="project-desc">A voice-activated intelligent assistant that handles task scheduling, web lookups, system control, and contextual conversations. Built with natural language processing and integrated with multiple APIs for a seamless experience.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span class="tag tag-red">Python</span>
+              <span class="tag tag-blue">NLP</span>
+              <span class="tag tag-blue">Speech Recognition</span>
+              <span class="tag tag-purple">API Integration</span>
+              <span class="tag tag-blue">Automation</span>
+            </div>
+            <a href="https://github.com/Baddibhanuprasad/JARVIS" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" aria-label="View JARVIS project on GitHub">
+              <i data-lucide="github" aria-hidden="true"></i>
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 4: SmartHome -->
+        <article class="project-card glass-card reveal-up" style="--delay:0.3s" aria-labelledby="proj4-title">
+          <div class="project-img-wrap">
+            <img
+              src="assets/img/project_smarthome_1794247482729.png"
+              alt="SmartHome Cloud Automation – IoT device network visualization"
+              class="project-img"
+              width="600"
+              height="338"
+              loading="lazy"
+            />
+            <div class="project-img-overlay" aria-hidden="true"></div>
+            <span class="project-num font-mono" aria-hidden="true">04</span>
+          </div>
+          <div class="project-content">
+            <h3 id="proj4-title" class="project-title">SmartHome – Cloud Automation System</h3>
+            <p class="project-desc">A cloud-integrated home automation platform enabling remote control of IoT devices via a web dashboard. Implements secure MQTT communication, real-time telemetry, and role-based access control for household device management.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span class="tag tag-red">IoT</span>
+              <span class="tag tag-blue">Cloud</span>
+              <span class="tag tag-blue">MQTT</span>
+              <span class="tag tag-purple">Python</span>
+              <span class="tag tag-blue">Security</span>
+            </div>
+            <a href="https://github.com/Baddibhanuprasad/SmartHome--automation" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" aria-label="View SmartHome project on GitHub">
+              <i data-lucide="github" aria-hidden="true"></i>
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="github-cta reveal-up">
+        <a href="https://github.com/Baddibhanuprasad" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" id="btn-github-all">
+          <i data-lucide="github" aria-hidden="true"></i>
+          View All Projects on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section id="achievements" class="section achievements-section" aria-labelledby="achievements-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="achievements-title" class="section-title reveal-up">
+          <span class="title-accent">04.</span> Achievements
+        </h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="achievements-grid">
+
+        <!-- Achievement 1: NSRIT Hackathon -->
+        <a
+          href="https://lnkd.in/p/djXxVfPR"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="achievement-card glass-card reveal-up"
+          style="--delay:0s"
+          aria-label="NSRIT 30-hour hackathon – 5th place nationally – view LinkedIn post"
+        >
+          <div class="ach-img-wrap">
+            <img
+              src="https://res.cloudinary.com/dhjktmlhs/image/upload/v1792338754/WhatsApp_Image_2026-10-11_at_7.42.51_PM_s1kfil.jpg"
+              alt="NSRIT 30-hour hackathon team photo showing our participation at NSRIT college in October 2026"
+              class="ach-img"
+              loading="lazy"
+            />
+            <div class="ach-img-overlay" aria-hidden="true"></div>
+            <div class="ach-badge" aria-label="Placement">5th</div>
+          </div>
+          <div class="ach-content">
+            <div class="ach-trophy" aria-hidden="true">🏅</div>
+            <h3 class="ach-title">HackWithVizag 4.0</h3>
+            <p class="ach-subtitle">NSRIT – 30 Hour Hackathon</p>
+            <p class="ach-detail font-mono">5th Place • National Level • Oct 2026 • 192 Teams</p>
+            <span class="ach-link-hint font-mono">↗ View on LinkedIn</span>
+          </div>
+        </a>
+
+        <!-- Achievement 2: VIET Hackathon -->
+        <a
+          href="https://lnkd.in/p/dajuAqss"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="achievement-card glass-card reveal-up"
+          style="--delay:0.1s"
+          aria-label="1st Place VIET Hackathon – view LinkedIn post"
+        >
+          <div class="ach-img-wrap">
+            <img
+              src="https://res.cloudinary.com/dhjktmlhs/image/upload/v1792339105/hackathon-viet_rmxugr.jpg"
+              alt="VIET hackathon win – team celebrating 1st place at Visakha Institute of Engineering and Technology"
+              class="ach-img"
+              loading="lazy"
+            />
+            <div class="ach-img-overlay" aria-hidden="true"></div>
+            <div class="ach-badge ach-gold" aria-label="Placement">1st</div>
+          </div>
+          <div class="ach-content">
+            <div class="ach-trophy" aria-hidden="true">🥇</div>
+            <h3 class="ach-title">1st Place – Hackathon</h3>
+            <p class="ach-subtitle">VIET – Internal Competition</p>
+            <p class="ach-detail font-mono">Champion • Cybersecurity Challenge</p>
+            <span class="ach-link-hint font-mono">↗ View on LinkedIn</span>
+          </div>
+        </a>
+
+        <!-- Achievement 3: VIET Project Expo -->
+        <a
+          href="https://lnkd.in/p/dAjKXBUR"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="achievement-card glass-card reveal-up"
+          style="--delay:0.2s"
+          aria-label="1st Place VIET Project Expo – view LinkedIn post"
+        >
+          <div class="ach-img-wrap">
+            <img
+              src="https://res.cloudinary.com/dhjktmlhs/image/upload/v1792339101/vietprojectexpo_pfhzvp.jpg"
+              alt="VIET Project Expo 1st place – project display at Visakha Institute of Engineering and Technology"
+              class="ach-img"
+              loading="lazy"
+            />
+            <div class="ach-img-overlay" aria-hidden="true"></div>
+            <div class="ach-badge ach-gold" aria-label="Placement">1st</div>
+          </div>
+          <div class="ach-content">
+            <div class="ach-trophy" aria-hidden="true">🥇</div>
+            <h3 class="ach-title">1st Place – Project Expo</h3>
+            <p class="ach-subtitle">VIET – Project Exhibition</p>
+            <p class="ach-detail font-mono">Best Project • Innovation Award</p>
+            <span class="ach-link-hint font-mono">↗ View on LinkedIn</span>
+          </div>
+        </a>
+
+        <!-- Achievement 4: Lendi Hackathon -->
+        <a
+          href="https://lnkd.in/p/d_zFPW_f"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="achievement-card glass-card reveal-up"
+          style="--delay:0.3s"
+          aria-label="4th Place Lendi Regional Hackathon – view LinkedIn post"
+        >
+          <div class="ach-img-wrap">
+            <img
+              src="https://res.cloudinary.com/dhjktmlhs/image/upload/v1792338965/lendi1_yfvsxw.jpg"
+              alt="Lendi Engineering College regional hackathon participation – team at competition"
+              class="ach-img"
+              loading="lazy"
+            />
+            <div class="ach-img-overlay" aria-hidden="true"></div>
+            <div class="ach-badge" aria-label="Placement">4th</div>
+          </div>
+          <div class="ach-content">
+            <div class="ach-trophy" aria-hidden="true">🏅</div>
+            <h3 class="ach-title">4th Place – Regional Hackathon</h3>
+            <p class="ach-subtitle">Lendi Engineering College</p>
+            <p class="ach-detail font-mono">4th Place • Regional Level Competition</p>
+            <span class="ach-link-hint font-mono">↗ View on LinkedIn</span>
+          </div>
+        </a>
+
+        <!-- Achievement 5: Additional Hackathons -->
+        <a
+          href="https://lnkd.in/p/dwf9ZJVk"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="achievement-card glass-card reveal-up"
+          style="--delay:0.4s"
+          aria-label="Additional hackathon participation – view LinkedIn post"
+        >
+          <div class="ach-content ach-content-solo">
+            <div class="ach-trophy big-trophy" aria-hidden="true">🏆</div>
+            <h3 class="ach-title">Multi-Hackathon Competitor</h3>
+            <p class="ach-subtitle">Multiple Competitions</p>
+            <p class="ach-detail font-mono">Participated in numerous regional &amp; national hackathons</p>
+            <span class="ach-link-hint font-mono">↗ View on LinkedIn</span>
+          </div>
+        </a>
+
+        <!-- Achievement 6: Project Expo (extra) -->
+        <a
+          href="https://lnkd.in/p/d_eADHfe"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="achievement-card glass-card reveal-up"
+          style="--delay:0.5s"
+          aria-label="Project Expo participation – view LinkedIn post"
+        >
+          <div class="ach-content ach-content-solo">
+            <div class="ach-trophy big-trophy" aria-hidden="true">🎯</div>
+            <h3 class="ach-title">Project Expo Showcases</h3>
+            <p class="ach-subtitle">Multiple Exhibition Events</p>
+            <p class="ach-detail font-mono">Showcased innovative projects across multiple engineering events</p>
+            <span class="ach-link-hint font-mono">↗ View on LinkedIn</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="section education-section" aria-labelledby="education-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="education-title" class="section-title reveal-up">
+          <span class="title-accent">05.</span> Education
+        </h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="timeline">
+
+        <!-- B.Tech – VIET -->
+        <div class="timeline-item reveal-up" style="--delay:0s">
+          <!-- LEFT: College Image -->
+          <div class="edu-img-wrap">
+            <img
+              src="https://image-static.collegedunia.com/public/college_data/images/appImage/_Visakha%20Building.jpg"
+              alt="Visakha Institute of Engineering and Technology campus building"
+              class="edu-img"
+              loading="lazy"
+            />
+            <div class="edu-img-overlay" aria-hidden="true"></div>
+            <span class="edu-img-badge">B.Tech</span>
+          </div>
+
+          <div class="timeline-dot" aria-hidden="true"></div>
+
+          <!-- RIGHT: Card -->
+          <div class="timeline-content glass-card">
+            <div class="card-corner-tl" aria-hidden="true"></div>
+            <div class="edu-header">
+              <div>
+                <h3 class="edu-degree">B.Tech &ndash; Computer Science &amp; Engineering (Cybersecurity)</h3>
+                <p class="edu-school">Visakha Institute of Engineering &amp; Technology (VIET)</p>
+              </div>
+              <span class="edu-year font-mono">2024 &ndash; 2027</span>
+            </div>
+            <p class="edu-focus">
+              <strong>Focus:</strong> Cybersecurity, Network Security, Ethical Hacking, AI &amp; ML, Cloud Computing
+            </p>
+            <div class="edu-tags">
+              <span class="tag tag-blue">Visakhapatnam, India</span>
+              <span class="tag tag-blue">In Progress</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diploma – Thandra Paparaya -->
+        <div class="timeline-item reveal-up" style="--delay:0.15s">
+          <!-- LEFT: College Image -->
+          <div class="edu-img-wrap">
+            <img
+              src="https://images.shiksha.com/mediadata/images/1755773280phpeNmE3g.jpeg"
+              alt="Thandra Paparaya Polytechnic College campus"
+              class="edu-img"
+              loading="lazy"
+            />
+            <div class="edu-img-overlay" aria-hidden="true"></div>
+            <span class="edu-img-badge edu-img-badge--purple">Diploma</span>
+          </div>
+
+          <div class="timeline-dot timeline-dot-alt" aria-hidden="true"></div>
+
+          <!-- RIGHT: Card -->
+          <div class="timeline-content glass-card">
+            <div class="card-corner-tl" aria-hidden="true"></div>
+            <div class="edu-header">
+              <div>
+                <h3 class="edu-degree">Diploma &ndash; Electronic and CommunicationEngineering</h3>
+                <p class="edu-school">Thandra Paparaya Polytechnic College</p>
+              </div>
+              <span class="edu-year font-mono">2021 &ndash; 2024</span>
+            </div>
+            <p class="edu-focus">
+              <strong>Focus:</strong> Programming Fundamentals, Database Systems, Networking, Electronics
+            </p>
+            <div class="edu-tags">
+              <span class="tag tag-purple">Visakhapatnam, India</span>
+              <span class="tag tag-purple">Completed</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATES ===== -->
+  <section id="certificates" class="section certs-section" aria-labelledby="certs-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="certs-title" class="section-title reveal-up">
+          <span class="title-accent">06.</span> Certifications
+        </h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="certs-grid">
+
+        <div class="cert-card glass-card reveal-up" style="--delay:0s" aria-label="Cisco Ethical Hacker Certification">
+          <div class="card-corner-tl" aria-hidden="true"></div>
+          <div class="cert-icon" aria-hidden="true">
+            <i data-lucide="shield-alert"></i>
+          </div>
+          <div class="cert-content">
+            <h3 class="cert-name">Cisco Ethical Hacker</h3>
+            <p class="cert-issuer font-mono">Cisco Networking Academy</p>
+            <p class="cert-desc">Ethical hacking methodologies, penetration testing workflows, reconnaissance, exploitation and reporting.</p>
+          </div>
+          <div class="cert-badge" aria-hidden="true">
+            <span>VERIFIED</span>
+          </div>
+        </div>
+
+        <div class="cert-card glass-card reveal-up" style="--delay:0.15s" aria-label="Cisco Networking Basics Certification">
+          <div class="card-corner-tl" aria-hidden="true"></div>
+          <div class="cert-icon cert-icon-blue" aria-hidden="true">
+            <i data-lucide="network"></i>
+          </div>
+          <div class="cert-content">
+            <h3 class="cert-name">Networking Basics</h3>
+            <p class="cert-issuer font-mono">Cisco Networking Academy</p>
+            <p class="cert-desc">Network fundamentals, TCP/IP protocols, subnetting, routing, switching and network security essentials.</p>
+          </div>
+          <div class="cert-badge cert-badge-blue" aria-hidden="true">
+            <span>VERIFIED</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="contact-title" class="section-title reveal-up">
+          <span class="title-accent">07.</span> Get In Touch
+        </h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-info reveal-left">
+          <p class="contact-intro">
+            Open to internships, collaborations, and cybersecurity challenges. Whether you have a project idea, a CTF team, or just want to talk security — my inbox is always open.
+          </p>
+
+          <div class="contact-links">
+            <a href="mailto:baddibhanuprasad01@gmail.com" class="contact-link" aria-label="Send email to Bhanu Prasad">
+              <div class="contact-link-icon" aria-hidden="true"><i data-lucide="mail"></i></div>
+              <div>
+                <span class="contact-link-label font-mono">EMAIL</span>
+                <span class="contact-link-value">baddibhanuprasad01@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://github.com/Baddibhanuprasad" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="GitHub profile">
+              <div class="contact-link-icon" aria-hidden="true"><i data-lucide="github"></i></div>
+              <div>
+                <span class="contact-link-label font-mono">GITHUB</span>
+                <span class="contact-link-value">github.com/Baddibhanuprasad</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/bhanu-prasad-96998a31b/" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="LinkedIn profile">
+              <div class="contact-link-icon" aria-hidden="true"><i data-lucide="linkedin"></i></div>
+              <div>
+                <span class="contact-link-label font-mono">LINKEDIN</span>
+                <span class="contact-link-value">bhanu-prasad-96998a31b</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="contact-langs">
+            <p class="contact-langs-label font-mono">// Languages</p>
+            <span class="tag tag-blue">English</span>
+            <span class="tag tag-purple">Telugu</span>
+          </div>
+
+          <a href="BADDI_BHANU_PRASAD_FlowCV_Resume_2026-11-03.pdf" download class="btn btn-primary btn-full" id="btn-dl-resume" aria-label="Download resume as PDF">
+            <i data-lucide="download" aria-hidden="true"></i>
+            Download Resume (PDF)
+          </a>
+        </div>
+
+        <div class="contact-form-wrap reveal-right">
+          <form
+            id="contact-form"
+            class="glass-card contact-form"
+            action="https://formspree.io/f/baddibhanuprasad01@gmail.com"
+            method="POST"
+            novalidate
+            aria-label="Contact form"
+          >
+            <div class="card-corner-tl" aria-hidden="true"></div>
+            <p class="form-terminal font-mono" aria-hidden="true">// send_message.sh</p>
+
+            <div class="form-group">
+              <label for="contact-name" class="form-label font-mono">NAME</label>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your Name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="contact-email" class="form-label font-mono">EMAIL</label>
+              <input type="email" id="contact-email" name="email" class="form-input" placeholder="your@email.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="contact-subject" class="form-label font-mono">SUBJECT</label>
+              <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="What's this about?" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-message" class="form-label font-mono">MESSAGE</label>
+              <textarea id="contact-message" name="message" class="form-input form-textarea" placeholder="Your message..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="btn-send-msg">
+              <i data-lucide="send" aria-hidden="true"></i>
+              <span>Transmit Message</span>
+            </button>
+            <p class="form-success" id="form-success" role="alert" aria-live="assertive" hidden>
+              ✓ Message transmitted. I'll respond soon.
+            </p>
+            <p class="form-error" id="form-error" role="alert" aria-live="assertive" hidden>
+              ✗ Transmission failed. Please email directly.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <p class="footer-copy font-mono">
+        © 2026 <span class="text-blue">BADDI BHANU PRASAD</span>. All rights reserved.
+      </p>
+      <p class="footer-made font-mono">
+        Built with <span class="text-red">♥</span> and lots of <span class="text-blue">caffeine</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <i data-lucide="chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
